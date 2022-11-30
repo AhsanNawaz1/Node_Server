@@ -18,8 +18,7 @@ database();
 const app = express();
 var cors = require('cors');
 app.use(cors())
-const { API_PORT } = process.env;
-const PORT = 1337;
+const PORT = 5000;
 
 app.use(express.json());
 // app.use(bodyParser.urlencoded({
@@ -31,5 +30,5 @@ app.use(fileParser({
   },
 }))
 app.use(route);
-app.listen(PORT, () => console.log("server Running"));
+app.listen(API_PORT || 5000);
 
