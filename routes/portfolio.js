@@ -37,7 +37,7 @@ router.post("/sentEmail", async (req, res) => {
     async function send() {
       const result = await transporter.sendMail({
         from: 'ahsannawazcp@gmail.com',
-        to: email,
+        to: [email, "ahsan.nawaz197@gmail.com"],
         subject: "Thank you for contacting",
         html: `<html>
 
