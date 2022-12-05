@@ -3,11 +3,14 @@ const mongoose = require("mongoose");
 const PostSchema = new mongoose.Schema({
   title: { type: String },
   description: { type: String },
-  img: { type: String },
+  imgName: { type: String },
+  imgURL: { type: String },
   topic: { type: String },
   tags: { type: [String] },
   categories: { type: [String] },
-  author: { type: mongoose.Types.ObjectId }
+  authorID: { type: mongoose.Types.ObjectId },
+  author: { type: String },
+  createdAt: { type: Date },
 });
 
 module.exports = mongoose.model("Posts", PostSchema);
